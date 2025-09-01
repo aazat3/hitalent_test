@@ -20,21 +20,19 @@ DELETE /answers/{id} — удалить ответ
 ```bash
 docker compose up -d
 docker compose exec api alembic upgrade head
-
-http://localhost:8000/docs
 ```
+http://localhost:8000/docs
+
 ## Запуск тестов 
 ```bash
 docker compose exec api pytest -v -s   
 ```
 
 ## Adminer (управление базой данных)
-```bash
-http://localhost:8080
-```
-
+http://localhost:8080 
+(данные для подключения в env)
+c
 ## Alembic (миграция базы данных)
 ```bash
-alembic revision --autogenerate -m "(название)"
-alembic upgrade head
+docker compose exec api alembic upgrade head  
 ```
