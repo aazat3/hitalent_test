@@ -30,10 +30,10 @@ docker compose exec api pytest -v -s
 
 ## Adminer (управление базой данных)
 http://localhost:8080 
-(данные для подключения в env)
+(данные для подключения в env файле)
 
 ## Alembic (миграция базы данных)
 ```bash
-docker composealembic revision --autogenerate -m "(название)"
+docker compose alembic revision --autogenerate -m "(название)"
 docker compose exec api alembic upgrade head  
 ```
