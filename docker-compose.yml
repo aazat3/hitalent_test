@@ -24,6 +24,9 @@ services:
   api:
     build: .
     container_name: question_api
+    volumes:
+      - ./migrations:/app/migrations   
+      - ./alembic.ini:/app/alembic.ini  
     env_file:
       - .env
     depends_on:
