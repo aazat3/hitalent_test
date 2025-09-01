@@ -18,7 +18,8 @@ DELETE /answers/{id} — удалить ответ
 
 ## Быстрый старт (Docker Compose)
 ```bash
-docker compose up --build
+docker compose up -d
+docker compose exec api alembic upgrade head
 
 http://localhost:8000/docs
 ```
